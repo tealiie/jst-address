@@ -1,9 +1,10 @@
 import React from 'react'
 
+
 export default React.createClass({
   render() {
     return (
-      <div id="">
+      <div id="Add-contact">
       createElemet(form, {className: 'ContactForm'},
       createElement('input', {
         type: 'text'
