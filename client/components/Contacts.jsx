@@ -1,4 +1,5 @@
 import React from 'react'
+import Contactlist from './ContactList'
 
 export default React.createClass({
   render() {
