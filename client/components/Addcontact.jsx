@@ -3,22 +3,31 @@ import React from 'react'
 export default React.createClass({
   render() {
     return (
-<div id="input">
-      <form action="index.html">
-        <input type="text" name="Name" value="">
-        Name<br>
-        <input type="text" name="Phone" value="">
-        Phone<br>
-        <input type="date" name="Birthday" value="">
-        Birthday<br>
-        <input type="text" name="Details" value="">
-        Details<br>
-    <button
-        className="button-back" onClick={this.navigateBack}>
-        Back
-      </button>
-
-      </div>
+      <div id="">
+      createElemet(form, {className: 'ContactForm'},
+      createElement('input', {
+        type: 'text'
+        placholder: 'Name (required)',
+        value: this.props.value.name,
+      }),
+      createElement('input', {
+        type: 'number'
+        placholder: 'Phone (required)',
+        value: this.props.value.phone,
+      }),
+      createElement('input', {
+        type: 'number'
+        placholder: 'Birthday (required)',
+        value: this.props.value.birthday,
+      }),
+      createElement('input', {
+        type: 'text'
+        placholder: 'Details',
+        value: this.props.value.details,
+      }),
+      createElement('button', {type: 'submit'}, "Add Contact")
     )
-  }
-})
+    </div>
+  )
+},
+});

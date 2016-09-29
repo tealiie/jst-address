@@ -8,7 +8,7 @@ export default React.createClass({
       <ul>
           <li>Contacts</li>
       </ul>
-        <form method="get" action="/addContact">
+        <form method="post" action="./addContact">
           <button type="submit"> add
             contact</button>
         </form>

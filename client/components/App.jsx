@@ -1,12 +1,12 @@
 import React from 'react'
-import Contactlist from 'contactlist'
+import Contactlist from './Contactlist'
 
 export default React.createClass({
   render() {
     return (
       <div>
-      <h1>React development has begun!</h1>
-      <contactlist />
+      <h1>Address Book</h1>
+      <Contactlist />
       </div>
     )
   }
