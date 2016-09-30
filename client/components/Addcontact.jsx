@@ -1,34 +1,39 @@
 import React from 'react'
+import addContact from './App'
 
+let addInput = null
 
 export default React.createClass({
   render() {
     return (
-      <div id="Add-contact">
-      createElemet(form, {className: 'ContactForm'},
-      createElement('input', {
-        type: 'text'
-        placholder: 'Name (required)',
-        value: this.props.value.name,
-      }),
-      createElement('input', {
-        type: 'number'
-        placholder: 'Phone (required)',
-        value: this.props.value.phone,
-      }),
-      createElement('input', {
-        type: 'number'
-        placholder: 'Birthday (required)',
-        value: this.props.value.birthday,
-      }),
-      createElement('input', {
-        type: 'text'
-        placholder: 'Details',
-        value: this.props.value.details,
-      }),
-      createElement('button', {type: 'submit'}, "Add Contact")
-    )
+      <div id="add-contact">
+        <input type='text'
+        placeholder='Name (required)' />
+
+      <input
+        type='number'
+        placeholder='Phone (required)' />
+
+      <input
+        type='number'
+        placeholder='Birthday (required)' />
+
+      <input
+        type='text'
+        placeholder='Details'
+        ref={input=> addInput = input} />
+
+      {/* <button type='submit'>
+      Add Contact</button>  */}
+
+
+      <input
+      type="submit"
+      value="add"
+      onClick={() => this.props.addContact(addInput.value)} />
+
+      <a href="#" onClick={this.props.back}>back</a>
     </div>
   )
-},
-});
+}
+})

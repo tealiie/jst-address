@@ -4,15 +4,12 @@ export default React.createClass({
   render() {
     return (
       <div id="list">
-      {this.props.contacts}
-      <ul>
-          <li>Contacts</li>
-      </ul>
-        <form method="post" action="./addContact">
-          <button type="submit"> add
-            contact</button>
-        </form>
-        </div>
+        {this.props.contacts}
+        <ul>
+            <li>Contacts</li>
+        </ul>
+        <a href="#" onClick={this.props.add}>Add New Contact</a>
+      </div>
     )
   }
 })
